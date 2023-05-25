@@ -1,9 +1,12 @@
-
 import "./App.css";
+import Login from "./pages/Login";
 
 function App() {
-
-  return <>Hi, mom</>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
 
 export default App;
