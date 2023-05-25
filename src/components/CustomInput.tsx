@@ -12,9 +12,7 @@ interface ICustomInput {
 
 export const CustomInput: React.FC<ICustomInput> = ({
   label,
-  value,
   type,
-  placeholder,
   id,
 }) => {
   const [inputType, setInputType] = useState("password");

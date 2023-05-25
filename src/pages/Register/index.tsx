@@ -9,7 +9,7 @@ import AppStore from "../../assets/images/App Store Badge.png";
 import { CustomInput } from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
 
-const Login: React.FC = () => {
+const Register: React.FC = () => {
   const counter: Array<number> = [1, 2, 3];
 
   return (
@@ -135,4 +135,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Register;
