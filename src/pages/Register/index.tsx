@@ -21,6 +21,7 @@ const Register: React.FC = () => {
         </p>
         <div className="mt-5 relative">
           <img
+            loading="lazy"
             className="mx-auto relative z-[1] w-[80%]"
             src={imgs}
             alt="phone icons"
