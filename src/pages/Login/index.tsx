@@ -14,22 +14,27 @@ const Login: React.FC = () => {
 
   return (
     <main className="w-full h-screen flex">
-      <section className="hidden lg:flex flex-col justify-between left w-[40%] h-full bg-primary-blue px-20 py-14 text-white">
+      <section className="design hidden lg:flex flex-col justify-between left w-[40%] h-full px-20 py-10 text-white">
         <p className="text-center font-medium text-lg leading-[1.4rem]">
           Social media shared today, tomorrow or <br />
           by location
         </p>
-        <div className="mt-0">
-          <img className="mx-auto" src={imgs} alt="phone icons" />
+        <div className="mt-5 relative">
+          <img
+            className="mx-auto relative z-[1] w-[80%]"
+            src={imgs}
+            alt="phone icons"
+          />
+          <div className="ellipse rounded-full top-1/2 -translate-y-1/2 right-1/2 translate-x-1/2  shadow absolute w-[110%] aspect-square"></div>
         </div>
-        <div className="flex items-center justify-center gap-2 ">
+        <div className="flex items-center justify-center gap-2">
           {counter.map((_, idx) => (
             <div
               key={idx}
-              className="rounded-full bg-white w-2.5 h-2.5 flex items-center justify-center"
+              className="rounded-full bg-white w-2 h-2 flex items-center justify-center"
             >
               <div
-                className={`w-2 h-2 rounded-full bg-primary-blue ${
+                className={`w-1.5 h-1.5 rounded-full bg-primary-blue ${
                   idx === 1 && "bg-white"
                 }`}
               >
@@ -57,9 +62,17 @@ const Login: React.FC = () => {
             <CustomInput id="First name" label="First name" />
             <CustomInput id="Last name" label="Last name" />
             <CustomInput id="email or phone" label="Email or Phone Number" />
-            <CustomInput id="date" label="Date of Birth (MM/DD/YY)" />
-            <CustomInput id="password" label="Password" />
-            <CustomInput id="confirm_password" label="Confirm Password" />
+            <CustomInput
+              id="date"
+              label="Date of Birth (MM/DD/YY)"
+              type="data"
+            />
+            <CustomInput id="password" label="Password" type="password" />
+            <CustomInput
+              id="confirm_password"
+              label="Confirm Password"
+              type="password"
+            />
             <div className="relative text-sm">
               <div className="flex gap-1 items-center">
                 <input type="checkbox" name="remember-me" id="remember-me" />
@@ -69,11 +82,17 @@ const Login: React.FC = () => {
                 <input type="checkbox" name="agree" id="agree" />
                 <label htmlFor="agree" className="whitespace-nowrap">
                   I agree to all the{" "}
-                  <a href="#" className="text-custom-blue">
+                  <a
+                    href="#"
+                    className="text-custom-blue hover:underline underline-offset-2"
+                  >
                     Terms
                   </a>{" "}
                   and{" "}
-                  <a href="#" className="text-custom-blue">
+                  <a
+                    href="#"
+                    className="text-custom-blue  hover:underline underline-offset-2"
+                  >
                     Privacy policy{" "}
                   </a>{" "}
                 </label>
@@ -81,7 +100,7 @@ const Login: React.FC = () => {
             </div>
             <a
               href="#"
-              className="text-primary-blue text-right text-sm absolute sm:static bottom-[180px] right-0"
+              className=" hover:underline underline-offset-2 text-primary-blue text-right text-sm absolute sm:static bottom-[180px] right-0"
             >
               Forgot Password?
             </a>
@@ -90,12 +109,15 @@ const Login: React.FC = () => {
             </CustomButton>
             <CustomButton className="bg-secondary-brown flex justify-center items-center gap-2 sm:mt-3">
               <img src={Google} />
-              <span>Sign in with Google</span>
+              <span>Sign-in with Google</span>
             </CustomButton>
           </form>
           <p className="text-sm text-center mt-5">
             Don’t have an account?{" "}
-            <a href="#" className="text-primary-blue">
+            <a
+              href="#"
+              className="text-primary-blue  hover:underline underline-offset-2"
+            >
               Log In
             </a>{" "}
           </p>
